@@ -12,23 +12,23 @@ Prior to using the full dataset with this repository, tissue masks must be conve
 # Usage
 The pipeline consists of three main methods. An atlas should be identified. See cited work for one way to select an atlas. Additionally, a text file is to be generated listing the path to all tissue masks.
 
-##`mesh_match.mat`
-**Function**: transforms tissue segmentation masks of knee MRI to 3D surfaces of the menisci
-**Inputs**:
-atlas_path        : path of atlas mask in .mat format
-df_path           : path of text file with paths of all other masks
-dst               : directory to which surfaces will be saved
+## `mesh_match.mat` <br />
+**Function**: transforms tissue segmentation masks of knee MRI to 3D surfaces of the menisci <br />
+**Inputs**: <br />
+atlas_path        : path of atlas mask in .mat format <br />
+df_path           : path of text file with paths of all other masks <br />
+dst               : directory to which surfaces will be saved <br />
 
 A preliminary quality control check can be performed here to ensure proper alignment of the matching algorithm. Another text file is to be generated listing the path to all tissue meshes from `mesh_match.mat`.
 
-##`run_pca.mat`
-**Function**: loads vertex data from surface meshes and performs probabilistic PCA to determine shape modes
-**Inputs**:
-df_path        : path of text file with paths of all meshes
-n_pc           : desired number of principal components
+## `run_pca.mat` <br />
+**Function**: loads vertex data from surface meshes and performs probabilistic PCA to determine shape modes <br />
+**Inputs**: <br />
+df_path        : path of text file with paths of all meshes <br />
+n_pc           : desired number of principal components <br />
 dst            : path to which PCA variables will be saved
 
-##`generate_shapes.mat`
+## `generate_shapes.mat`  <br />
 **Function**: interactive script to generate and visualize shape variations after PCA
 
 # Citation
